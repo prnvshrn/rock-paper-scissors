@@ -10,10 +10,6 @@ class OptionsComponent extends React.Component {
     super(props);
   }
 
-  checkClick(){
-    console.log('OptionsComponent called!!!');
-  }
-
   render(){
     return(
         <div class="container">
@@ -21,9 +17,9 @@ class OptionsComponent extends React.Component {
             Please select an option from below :
           </div>
           <div class="row">
-            <div class="col-sm-4"><CardComponent ResultPropChild={this.props.ResultProp} card_img={rock_icon} card_title='Rock' /></div>
-            <div class="col-sm-4"><CardComponent card_img={paper_icon} card_title='Paper'/></div>
-            <div class="col-sm-4"><CardComponent card_img={scissor_icon} card_title='Scissor'/></div>
+            <div class="col-sm-4"><CardComponent value='check' ResultPropChild={this.props.ResultProp} card_img={rock_icon} card_title='Rock' /></div>
+            <div class="col-sm-4"><CardComponent ResultPropChild={this.props.ResultProp}  card_img={paper_icon} card_title='Paper'/></div>
+            <div class="col-sm-4"><CardComponent ResultPropChild={this.props.ResultProp} card_img={scissor_icon} card_title='Scissor'/></div>
           </div>
       </div>
     );
