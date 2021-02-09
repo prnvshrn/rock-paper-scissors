@@ -38,6 +38,30 @@
 }
 
 .main-logo{
-  max-height: 200px;
-  max-width: 200px;
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+img{
+  height: 100%;
+  width: 100%;
+}
+
+.AppTitle{
+  text-align: left;
+  margin-top: 15px;
+}
+
+.margin-top-50px{
+  margin-top: 50px;
+}
+
+.card{
+  border: none;
+}
+
+.resultText{
+  text-transform: uppercase;
+  text-align: left;
 }

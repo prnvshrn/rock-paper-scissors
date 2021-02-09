@@ -8,7 +8,7 @@ class CardComponent extends React.Component {
 
     render(){
         return(
-            <div><img src = {this.props.card_img} alt={this.props.card_title} onClick={this.props.ResultPropChild}/>{this.props.card_title}</div>
+            <div><img src = {this.props.card_img} alt={this.props.card_title} onClick={this.props.ResultPropChild}/><h5>{this.props.card_title}</h5></div>
         );
     }
 }

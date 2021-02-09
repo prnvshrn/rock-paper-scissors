@@ -12,6 +12,7 @@ class App extends React.Component {
     this.state = {currentState : 'options', selectedOption: null, computerOptions: null, result: null, score: 0};
     this.openOptionsComponent = this.openOptionsComponent.bind(this);
     this.openResultComponent = this.openResultComponent.bind(this);
+    this.resetScore = this.resetScore.bind(this);
   }
 
   openOptionsComponent(){
@@ -33,6 +34,10 @@ class App extends React.Component {
     this.setState({selectedOption : option});
   }
 
+  resetScore(){
+    this.setState({currentState : 'options', score : 0});
+  }
+
   render(){ 
     let UI = '';
 
@@ -40,22 +45,22 @@ class App extends React.Component {
       UI = <OptionsComponent ResultProp={this.openResultComponent}/>
     }
     else if(this.state.currentState === 'result'){
-      UI = <ResultComponent resultOption={this.state.result} selectedOption={this.state.selectedOption} OptionProp={this.openOptionsComponent} ComputerOption={this.state.computerOptions}/>
+      UI = <ResultComponent resetScoreProp={this.resetScore} resultOption={this.state.result} selectedOption={this.state.selectedOption} OptionProp={this.openOptionsComponent} ComputerOption={this.state.computerOptions}/>
     }
 
     return (
       <div className="App">
         <div class="container">
             <div class="row">
-              <div class="col-sm-4">
+              <div class="col-sm-12">
                 <img src={logo} class="main-logo" alt="logo" />
-              </div>
-              <div class="col-sm-8">
-              <h1>
+                <h1 className="AppTitle">
                 Rock Paper Scissors
                 </h1>
               </div>
             </div>
+        </div>
+        <div className="container margin-top-50px">
             <div class="row">
               <div class="col-sm-6 col-md-6 col-lg-8">{UI}</div>
               <div class="col-sm-6 col-md-6 col-lg-4"><ScoreComponent score={this.state.score}/></div>

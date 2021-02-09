@@ -1,7 +1,7 @@
 import React from 'react';
-import rock_icon from './rock-icon.png';
-import paper_icon from './paper-icon.png';
-import scissor_icon from './scissor-icon.png';
+import rock_icon from './rock-without-bg.jpg';
+import paper_icon from './paper-without-bg.jpg';
+import scissor_icon from './scissor-without-bg.jpg';
 import CardComponent from './CardComponent.js';
 
 class OptionsComponent extends React.Component {
@@ -11,10 +11,12 @@ class OptionsComponent extends React.Component {
   }
 
   render(){
+    
+
     return(
         <div class="container">
           <div class="row">
-            Please select an option from below :
+            <h4>Please select an option from below :</h4>
           </div>
           <div class="row">
             <div class="col-sm-4"><CardComponent value='check' ResultPropChild={this.props.ResultProp} card_img={rock_icon} card_title='Rock' /></div>
